@@ -1,0 +1,75 @@
+<template>
+  <div class="border rounded mt-2 w-100 shadow-sm p-2">
+    <P class="h5">הוסף תמונה:</P>
+    <form @submit.prevent="$emit('pushData', myImg)" class="w-100">
+      <textarea name="" id="" cols="30" rows="3" v-model="myImg.text" required
+        placeholder="כתוב מתכון או איפה הצטלמתם"></textarea>
+      <input type="text" v-model="myImg.name" placeholder="שם פרטי" required>
+      <input type="text" v-model="myImg.lestName" placeholder="שם משפחה" required>
+      <input type="text" v-model="myImg.scoole" placeholder="בית ספר" required>
+      <input type="text" v-model="myImg.city" placeholder="ישוב" required>
+      <input type="text" v-model="myImg.street" placeholder="רחוב" required>
+      <input type="text" v-model="myImg.namHome" placeholder="מספר בית" required>
+      <input type="file" @change="previewImage" placeholder="העלה תמונה" required>
+      <div class="w-100 mt-2">
+        <button type="submit" class="btn btn-success">שלח תמונה</button>
+      </div>
+    </form>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'ananswerWrite',
+    props: ['answer'],
+    data() {
+      return {
+        myImg: {
+          name: "",
+          lestName: "",
+          scoole: "",
+          img: "",
+          text: "",
+          city: "",
+          street: "",
+          namHome: "",
+        }
+
+      }
+    },
+    methods: {
+      previewImage(event) {
+        // Reference to the DOM input element
+        var input = event.target;
+        // Ensure that you have a file before attempting to read it
+        if (input.files && input.files[0]) {
+          // create a new FileReader to read this image and convert to base64 format
+          var reader = new FileReader();
+          // Define a callback function to run, when FileReader finishes its job
+          reader.onload = (e) => {
+            // Note: arrow function used here, so that "this.imageData" refers to the imageData of Vue component
+            // Read image as base64 and set to imageData
+            this.myImg.img = e.target.result;
+            // imgLogo = this.imageData;
+            console.log(this.imageData);
+          }
+          // Start the reader job - read file as a data url (base64 format)
+          reader.readAsDataURL(input.files[0]);
+
+        }
+
+      }
+    }
+  }
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  form input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+</style>
