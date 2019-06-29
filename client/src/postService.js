@@ -1,4 +1,5 @@
-const url = 'https://answer-rambam.herokuapp.com/api/posts';
+// const url = 'https://answer-rambam.herokuapp.com/api/posts';
+const url = 'http://localhost:8000/api/posts';
 
 
 class postService {

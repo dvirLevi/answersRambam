@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import compressor from "compressorjs";
+
   export default {
     name: 'ananswerWrite',
     props: ['answer'],
@@ -39,23 +41,23 @@
     },
     methods: {
       previewImage(event) {
-        // Reference to the DOM input element
-        var input = event.target;
-        // Ensure that you have a file before attempting to read it
-        if (input.files && input.files[0]) {
-          // create a new FileReader to read this image and convert to base64 format
-          var reader = new FileReader();
-          // Define a callback function to run, when FileReader finishes its job
-          reader.onload = (e) => {
-            // Note: arrow function used here, so that "this.imageData" refers to the imageData of Vue component
-            // Read image as base64 and set to imageData
-            this.myImg.img = e.target.result;
-            // imgLogo = this.imageData;
-            console.log(this.imageData);
-          }
-          // Start the reader job - read file as a data url (base64 format)
-          reader.readAsDataURL(input.files[0]);
+        let file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          let asd = this
+          new Compressor(file, {
+            width: 150,
+            quality: 0.6,
+            success(result) {
+              let timyImg = result;
+              console.log(timyImg)
+              reader.onload = (event) => {
+                asd.myImg.img = reader.result;
+              }
+              reader.readAsDataURL(timyImg);
 
+            },
+          });
         }
 
       }
