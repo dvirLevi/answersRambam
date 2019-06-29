@@ -7,7 +7,7 @@ var cors = require('cors');
 // ספרייה שקוראת json שמגיע מ body הקליינט
 const bodyParser = require('body-parser');
 // ספרייה שיוצרת id
-const uuidv1 = require('uuid/v1');
+// const uuidv1 = require('uuid/v1');
 
 
 // הגדרת השימוש בספריות
