@@ -47,7 +47,7 @@
             ]
           },
           {
-            date: '2019-06-28',
+            date: '2019-06-30',
             img: [{
                 img: require("../assets/1.png"),
                 id: 1
