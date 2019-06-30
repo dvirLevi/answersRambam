@@ -1,6 +1,6 @@
 <template>
   <div class="center-all w-100">
-    <div class="w-100 h2">התמונה שלי</div>
+    <div class="w-100 h2 font-weight-bold">התמונה שלי</div>
     <div class="center-all rols">
       <p>הייתם שם? ניסיתם? יש לכם מתכון? זה המקום להעלות תמונות שלכם מהמקומות עליהם למדנו בחוברת, תמונות מהפעילויות
         השונות

@@ -1,11 +1,18 @@
 <template>
   <div class="center-all w-100">
-    <div class="w-100 h2">השאלה היומית</div>
-    <div class="img-answer center-all w-100">
+    <div class="w-100 h2 font-weight-bold">השאלה היומית</div>
+    <div class="center-all w-100">
+      <div @click="showMenu = !showMenu" class="selector">{{textSelector}}
+        <div v-if="showMenu" class="menu-selector center-all">
+          <p class="w-100" v-for="date in queDate" @click="selectAnswer(date)" :key="date.date">{{date.date}}</p>
+        </div>
+      </div>
+    </div>
+    <div v-if="formatDate != null" class="img-answer center-all w-100">
       <img class="w-100 mt-1" v-for="que in cotrrentImg" :key="que.id" :src="que.img" alt="">
     </div>
-    <answerWrite @close="showInputs = !showInputs" @pushData="pushData" v-if="showInputs" />
-    <div class="w-100 mt-2" v-if="!showInputs">
+    <answerWrite v-if="formatDate != null && showInputs" @close="showInputs = !showInputs" @pushData="pushData" />
+    <div v-if="formatDate != null && !showInputs" class="w-100 mt-2">
       <button type="button" class="" @click="showInputs = !showInputs">הוסיפו את התשובה שלכם</button>
     </div>
     <answerIn v-for="oneAns in addAnswers.answers" :key="oneAns.id" :answer="oneAns" />
@@ -34,9 +41,11 @@
         addAnswers: {
           answers: []
         },
+        textSelector: "בחר תאריך",
+        showMenu: false,
+        formatDate: null,
         queDate: [{
-            // date: '2019-07-1',
-            date: '2019-06-30',
+            date: '2019-07-01',
 
             img: [{
                 img: require("../assets/2-1.png"),
@@ -61,7 +70,7 @@
             ]
           },
           {
-            date: '2019-07-02',
+            date: '2019-07-03',
             img: [{
                 img: require("../assets/5.png"),
                 id: 1
@@ -232,37 +241,26 @@
       }
     },
     async created() {
-      // try {
-      //   this.addAnswers.answers = await postService.get();
-      // } catch (err) {
-      //   console.log(err)
-      // }
-      this.apdateAnswers()
+      // this.apdateAnswers()
     },
     computed: {
       cotrrentImg() {
         let arrImg = this.queDate.filter((value) => {
-          return value.date == this.formatDate();
+          return value.date == this.formatDate;
         })
-
         return arrImg[0].img
+
       }
 
     },
     methods: {
-      formatDate() {
-        var d = new Date(),
-          month = '' + (d.getMonth() + 1),
-          day = '' + d.getDate(),
-          year = d.getFullYear();
-
-        if (month.length < 2) month = '0' + month;
-        if (day.length < 2) day = '0' + day;
-
-        return [year, month, day].join('-');
+      selectAnswer(date) {
+        this.formatDate = date.date;
+        this.apdateAnswers();
       },
       async pushData(data) {
-        data.date = this.formatDate();
+        alert()
+        data.date = this.formatDate;
         try {
           await postService.insert(data);
           this.apdateAnswers();
@@ -274,7 +272,7 @@
         try {
           let nowDate = await postService.get();
           this.addAnswers.answers = await nowDate.filter((value) => {
-            return value.date == this.formatDate();
+            return value.date == this.formatDate;
           })
           this.showInputs = false;
         } catch (err) {
@@ -289,7 +287,7 @@
 <style scoped>
   .img-answer {
     /* border: solid #fbf6ce 2px; */
-    -webkit-box-shadow: 0px 0px 3px 2px #c3c3c3;
+    box-shadow: 0px 0px 3px 2px #c3c3c3;
     border-radius: 7px;
     padding: 9px;
   }
@@ -305,5 +303,26 @@
     border-radius: 10px;
     font-weight: bold;
     color: #501925;
+  }
+
+  .selector {
+    border: solid red 2px;
+    width: 45%;
+    font-weight: bold;
+    padding: 1%;
+    border-radius: 20px;
+    margin: 2%;
+    position: relative;
+  }
+
+  .menu-selector {
+    position: absolute;
+    width: 100%;
+    top: 116%;
+    left: 1%;
+    background-color: #ffffff;
+    height: 400px;
+    overflow-x: auto;
+    z-index: 1;
   }
 </style>
