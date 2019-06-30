@@ -4,7 +4,7 @@
     <div class="w-100 text-right h6">{{answer.ans}}</div>
     <div class="center-all w-100">
       <!-- <div class="w-50 text-right h6">שם: {{answer.name}} {{answer.lestName}}</div> -->
-      <div class="w-100 text-right h6">ביה"ס: {{answer.scoole}}</div>
+      <div class="w-100 text-right h6">בית-ספר: {{answer.scoole}}</div>
     </div>
   </div>
 </template>

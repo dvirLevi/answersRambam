@@ -306,6 +306,10 @@ border: solid #fbf6ce 2px;
     border-radius: 7px;
     padding: 9px;
 }
+
+.img-answer img{
+    border-radius: 7px;
+}
 button {
     border: none;
     background-color: #75ceb4;
