@@ -7,7 +7,7 @@
       <input type="text" v-model="myImg.name" placeholder="שם פרטי" required>
       <input type="text" v-model="myImg.lestName" placeholder="שם משפחה" required>
       <input type="text" v-model="myImg.scoole" placeholder="בית ספר" required>
-      <p>*פרטים למשלוח הפרס לזוכים (הכתובת המלאה לא תופיע באתר)</p>
+      <p>*פרטים למשלוח הפרס לזוכים בהגרלה (הכתובת המלאה לא תופיע באתר)</p>
       <input type="text" v-model="myImg.city" placeholder="ישוב" required>
       <input type="text" v-model="myImg.street" placeholder="רחוב" required>
       <input type="text" v-model="myImg.namHome" placeholder="מספר בית" required>
@@ -91,7 +91,7 @@ import Compressor from 'compressorjs';
   form p {
     width: 75%;
     margin: 0 auto;
-    font-size: 12px;
+    font-size: 10px;
     text-align: right;
     font-weight: bold;
   }

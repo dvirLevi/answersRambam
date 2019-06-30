@@ -1,9 +1,12 @@
 <template>
   <div class="center-all w-100">
     <div class="w-100 h2">התמונה שלי</div>
-    <p>הייתם שם? ניסיתם? יש לכם מתכון? זה המקום להעלות תמונות שלכם מהמקומות עליהם למדנו בחוברת, תמונות מהפעילויות השונות
-      בחוברת, קומיקסים שציירתם על פי המשימות השונות וגם- מתכונים. הכניסו תמונה וכתבו את המתכון.
-      <span>יש לקבל את אישור ההורים.</span></p>
+    <div class="center-all rols">
+      <p>הייתם שם? ניסיתם? יש לכם מתכון? זה המקום להעלות תמונות שלכם מהמקומות עליהם למדנו בחוברת, תמונות מהפעילויות
+        השונות
+        בחוברת, קומיקסים שציירתם על פי המשימות השונות וגם- מתכונים. הכניסו תמונה וכתבו את המתכון.
+        <span>יש לקבל את אישור ההורים.</span></p>
+    </div>
     <imageAdd @close="showInputs = !showInputs" @pushData="pushData" v-if="showInputs" />
     <div class="w-100 mt-2" v-if="!showInputs">
       <button type="button" class="" @click="showInputs = !showInputs">הוסיפו את התמונה שלכם</button>
@@ -72,8 +75,15 @@
     font-weight: bold;
     color: #501925;
   }
+
   span {
     font-weight: bold;
   }
- 
+
+  .rols {
+    border: solid #fbf6ce 2px;
+    box-shadow: 1px 1px 5px 0px #c3c3c3;
+    border-radius: 7px;
+    padding: 9px;
+  }
 </style>

@@ -30,5 +30,15 @@ export default {
 .col-sm-6:nth-child(2) {
   border-left: none;
 }
+
+@media (max-width: 767.98px) { 
+  .col-sm-6 {
+      border-left: none;
+}
+.col-sm-6:nth-child(2) {
+  border-top: solid rgb(226, 226, 226) 2px;
+  margin-top: 10px;
+}
+ }
 </style>
 

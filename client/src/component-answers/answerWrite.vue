@@ -7,7 +7,7 @@
       <input type="text" v-model="answers.name" placeholder="שם פרטי" required>
       <input type="text" v-model="answers.lestName" placeholder="שם משפחה" required>
       <input type="text" v-model="answers.scoole" placeholder="בית ספר" required>
-      <p>*פרטים למשלוח הפרס לזוכים (הכתובת המלאה לא תופיע באתר)</p>
+      <p>*פרטים למשלוח הפרס לזוכים בהגרלה (הכתובת המלאה לא תופיע באתר)</p>
       <input type="text" v-model="answers.city" placeholder="ישוב" required>
       <input type="text" v-model="answers.street" placeholder="רחוב" required>
       <input type="number" v-model="answers.nam" placeholder="מספר בית" required>
@@ -61,7 +61,7 @@
   form p {
     width: 75%;
     margin: 0 auto;
-    font-size: 12px;
+    font-size: 10px;
     text-align: right;
     font-weight: bold;
   }
