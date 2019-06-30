@@ -81,8 +81,7 @@
   }
 
   .rols {
-    border: solid #fbf6ce 2px;
-    box-shadow: 1px 1px 5px 0px #c3c3c3;
+    -webkit-box-shadow: 0px 0px 3px 2px #c3c3c3;
     border-radius: 7px;
     padding: 9px;
   }
