@@ -1,44 +1,53 @@
 <template>
-  <page>
-    <div class="col-sm-6">
-      <answerSharing/>
+  <div>
+    <div class="row">
+      <div class="col">
+      <titleAnswer/>
+      </div>
     </div>
-    <div class="col-sm-6">
-      <imageSharing/>
+    <div class="row mt-3">
+      <div class="col-sm-6">
+        <answerSharing />
+      </div>
+      <div class="col-sm-6">
+        <imageSharing />
+      </div>
     </div>
-  </page>
+  </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import imageSharing from '@/component-image-upload/imageSharing.vue'
-import answerSharing from '@/component-answers/answerSharing.vue'
+  // @ is an alias to /src
+  import imageSharing from '@/component-image-upload/imageSharing.vue'
+  import answerSharing from '@/component-answers/answerSharing.vue'
+  import titleAnswer from '@/components/titleAnswer.vue'
 
-export default {
-  name: 'home',
-  components: {
-    answerSharing,
-    imageSharing
+  export default {
+    name: 'home',
+    components: {
+      answerSharing,
+      imageSharing,
+      titleAnswer
+    }
   }
-}
 </script>
 <style scoped>
-.col-sm-6 {
-      border-left: solid rgb(226, 226, 226) 2px;
-}
-
-.col-sm-6:nth-child(2) {
-  border-left: none;
-}
-
-@media (max-width: 767.98px) { 
   .col-sm-6 {
-      border-left: none;
-}
-.col-sm-6:nth-child(2) {
-  border-top: solid rgb(226, 226, 226) 2px;
-  margin-top: 10px;
-}
- }
-</style>
+    /* border-left: solid rgb(226, 226, 226) 2px; */
+  }
 
+  .col-sm-6:nth-child(2) {
+    border-left: none;
+  }
+
+  @media (max-width: 767.98px) {
+    .col-sm-6 {
+      border-left: none;
+    }
+
+    .col-sm-6:nth-child(2) {
+      border-top: solid rgb(226, 226, 226) 2px;
+      margin-top: 10px;
+    }
+  }
+</style>

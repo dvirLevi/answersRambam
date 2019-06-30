@@ -1,11 +1,17 @@
 <template>
   <div class="center-all w-100">
-    <div class="w-100 h2 font-weight-bold">התמונה שלי</div>
+    <div class="title w-100 center-all">
+      <img  src="../assets/camera.png" alt="">
+      <p class="h2 font-weight-bold m-0">התמונה שלי</p>
+    </div>
     <div class="center-all rols">
-      <p>הייתם שם? ניסיתם? יש לכם מתכון? זה המקום להעלות תמונות שלכם מהמקומות עליהם למדנו בחוברת, תמונות מהפעילויות
+      <p>הייתם שם? ניסיתם? יש לכם מתכון? </p>
+      <p>זה המקום להעלות תמונות שלכם מהמקומות עליהם למדנו בחוברת, תמונות מהפעילויות
         השונות
-        בחוברת, קומיקסים שציירתם על פי המשימות השונות וגם- מתכונים. הכניסו תמונה וכתבו את המתכון.
-        <span>יש לקבל את אישור ההורים.</span></p>
+        בחוברת,</p>
+      <p> קומיקסים שציירתם על פי המשימות השונות וגם- מתכונים. הכניסו תמונה וכתבו את המתכון.
+      </p>
+      <p>-יש לקבל את אישור ההורים-</p>
     </div>
     <imageAdd @close="showInputs = !showInputs" @pushData="pushData" v-if="showInputs" />
     <div class="w-100 mt-2" v-if="!showInputs">
@@ -67,6 +73,10 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.title img {
+  width: 15%;
+  margin: 2%
+}
   button {
     border: none;
     background-color: #75ceb4;
@@ -76,8 +86,9 @@
     color: #501925;
   }
 
-  span {
+  p {
     font-weight: bold;
+    margin: 0;
   }
 
   .rols {
