@@ -24,7 +24,7 @@ export default {
 </script>
 <style scoped>
 .col-sm-6 {
-  border-left: solid rgb(0, 0, 0) 1px;
+      border-left: solid rgb(226, 226, 226) 2px;
 }
 
 .col-sm-6:nth-child(2) {

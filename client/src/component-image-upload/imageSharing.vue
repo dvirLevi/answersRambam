@@ -1,12 +1,12 @@
 <template>
   <div class="center-all w-100">
     <div class="w-100 h2">התמונה שלי</div>
-    <!-- <div class="center-all w-100">
-      <img class="w-100" v-for="que in cotrrentImg" :key="que.id" :src="que.img" alt="">
-    </div> -->
+    <p>הייתם שם? ניסיתם? יש לכם מתכון? זה המקום להעלות תמונות שלכם מהמקומות עליהם למדנו בחוברת, תמונות מהפעילויות השונות
+      בחוברת, קומיקסים שציירתם על פי המשימות השונות וגם- מתכונים. הכניסו תמונה וכתבו את המתכון.
+      <span>יש לקבל את אישור ההורים.</span></p>
     <imageAdd @pushData="pushData" v-if="showInputs" />
     <div class="w-100 mt-2" v-if="!showInputs">
-      <button type="button" class="btn btn-primary" @click="showInputs = !showInputs">הוסף תמונה</button>
+      <button type="button" class="" @click="showInputs = !showInputs">הוסף תמונה</button>
     </div>
     <imageIn v-for="oneImg in addImg" :key="oneImg.id" :oneImg="oneImg" />
 
@@ -35,7 +35,7 @@
       }
     },
     created() {
-this.apdateImages();
+      this.apdateImages();
     },
     computed: {
 
@@ -50,9 +50,9 @@ this.apdateImages();
           console.log(err)
         }
       },
-        async apdateImages() {
+      async apdateImages() {
         try {
-         this.addImg = await postService.get("image");
+          this.addImg = await postService.get("image");
           this.showInputs = false;
         } catch (err) {
           console.log(err)
@@ -64,5 +64,15 @@ this.apdateImages();
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  button {
+    border: none;
+    background-color: #75ceb4;
+    padding: 7px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #501925;
+  }
+  span {
+    font-weight: bold;
+  }
 </style>

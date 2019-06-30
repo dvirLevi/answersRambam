@@ -1,12 +1,12 @@
 <template>
   <div class="center-all w-100">
     <div class="w-100 h2">השאלה היומית</div>
-    <div class="center-all w-100">
+    <div class="img-answer center-all w-100">
       <img class="w-100" v-for="que in cotrrentImg" :key="que.id" :src="que.img" alt="">
     </div>
     <answerWrite @pushData="pushData" v-if="showInputs" />
     <div class="w-100 mt-2" v-if="!showInputs">
-      <button type="button" class="btn btn-primary" @click="showInputs = !showInputs">הוסף תשובה</button>
+      <button type="button" class="" @click="showInputs = !showInputs">הוסף תשובה</button>
     </div>
     <answerIn v-for="oneAns in addAnswers.answers" :key="oneAns.id" :answer="oneAns" />
 
@@ -35,21 +35,35 @@
           answers: []
         },
         queDate: [{
-            date: '2019-06-27',
-            img: [{
-                img: require("../assets/1.png"),
-                id: 1
-              },
-              {
-                img: "",
-                id: 2
-              },
-            ]
-          },
-          {
+            // date: '2019-07-1',
             date: '2019-06-30',
+
             img: [{
-                img: require("../assets/1.png"),
+                img: require("../assets/2-1.png"),
+                id: 1
+              },
+              {
+                img: require("../assets/2-2.png"),
+                id: 2
+              },
+            ]
+          },
+          {
+            date: '2019-07-02',
+            img: [{
+                img: require("../assets/3-1.png"),
+                id: 1
+              },
+              {
+                img: require("../assets/3-2.png"),
+                id: 2
+              },
+            ]
+          },
+          {
+            date: '2019-07-02',
+            img: [{
+                img: require("../assets/5.png"),
                 id: 1
               },
               {
@@ -57,11 +71,168 @@
                 id: 2
               },
             ]
-          },
+          }
+          ,
           {
-            date: '2019-06-29',
+            date: '2019-07-07',
             img: [{
-                img: require("../assets/1.png"),
+                img: require("../assets/8.png"),
+                id: 1
+              },
+              {
+                img: "",
+                id: 2
+              },
+            ]
+          }
+          ,
+          {
+            date: '2019-07-09',
+            img: [{
+                img: require("../assets/10.png"),
+                id: 1
+              },
+              {
+                img: "",
+                id: 2
+              },
+            ]
+          }
+          ,
+          {
+            date: '2019-07-11',
+            img: [{
+                img: require("../assets/12-1.png"),
+                id: 1
+              },
+              {
+                img: require("../assets/12-2.png"),
+                id: 2
+              },
+            ]
+          }
+          ,
+          {
+            date: '2019-07-12',
+            img: [{
+                img: require("../assets/13.png"),
+                id: 1
+              },
+              {
+                img: "",
+                id: 2
+              },
+            ]
+          }
+          ,
+          {
+            date: '2019-07-15',
+            img: [{
+                img: require("../assets/16.png"),
+                id: 1
+              },
+              {
+                img: "",
+                id: 2
+              },
+            ]
+          }
+          ,
+          {
+            date: '2019-07-16',
+            img: [{
+                img: require("../assets/17.png"),
+                id: 1
+              },
+              {
+                img: "",
+                id: 2
+              },
+            ]
+          }
+          ,
+          {
+            date: '2019-07-18',
+            img: [{
+                img: require("../assets/19.png"),
+                id: 1
+              },
+              {
+                img: "",
+                id: 2
+              },
+            ]
+          }
+          ,
+          {
+            date: '2019-07-22',
+            img: [{
+                img: require("../assets/23.png"),
+                id: 1
+              },
+              {
+                img: "",
+                id: 2
+              },
+            ]
+          }
+          ,
+          {
+            date: '2019-07-24',
+            img: [{
+                img: require("../assets/25.png"),
+                id: 1
+              },
+              {
+                img: "",
+                id: 2
+              },
+            ]
+          }
+          ,
+          {
+            date: '2019-07-31',
+            img: [{
+                img: require("../assets/32-1.png"),
+                id: 1
+              },
+              {
+                img: require("../assets/32-2.png"),
+                id: 2
+              },
+            ]
+          }
+          ,
+          {
+            date: '2019-08-13',
+            img: [{
+                img: require("../assets/45.png"),
+                id: 1
+              },
+              {
+                img: "",
+                id: 2
+              },
+            ]
+          }
+          ,
+          {
+            date: '2019-08-20',
+            img: [{
+                img: require("../assets/52.png"),
+                id: 1
+              },
+              {
+                img: "",
+                id: 2
+              },
+            ]
+          }
+          ,
+          {
+            date: '2019-08-27',
+            img: [{
+                img: require("../assets/59.png"),
                 id: 1
               },
               {
@@ -129,5 +300,19 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.img-answer {
+border: solid #fbf6ce 2px;
+    box-shadow: 1px 1px 5px 0px #c3c3c3;
+    border-radius: 7px;
+    padding: 9px;
+}
+button {
+    border: none;
+    background-color: #75ceb4;
+    padding: 7px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #501925;
+  }
+    
 </style>
