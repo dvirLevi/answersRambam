@@ -4,9 +4,9 @@
     <div class="img-answer center-all w-100">
       <img class="w-100" v-for="que in cotrrentImg" :key="que.id" :src="que.img" alt="">
     </div>
-    <answerWrite @pushData="pushData" v-if="showInputs" />
+    <answerWrite @close="showInputs = !showInputs" @pushData="pushData" v-if="showInputs" />
     <div class="w-100 mt-2" v-if="!showInputs">
-      <button type="button" class="" @click="showInputs = !showInputs">הוסף תשובה</button>
+      <button type="button" class="" @click="showInputs = !showInputs">הוסיפו את התשובה שלכם</button>
     </div>
     <answerIn v-for="oneAns in addAnswers.answers" :key="oneAns.id" :answer="oneAns" />
 

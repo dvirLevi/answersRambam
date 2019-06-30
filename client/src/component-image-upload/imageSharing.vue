@@ -4,9 +4,9 @@
     <p>הייתם שם? ניסיתם? יש לכם מתכון? זה המקום להעלות תמונות שלכם מהמקומות עליהם למדנו בחוברת, תמונות מהפעילויות השונות
       בחוברת, קומיקסים שציירתם על פי המשימות השונות וגם- מתכונים. הכניסו תמונה וכתבו את המתכון.
       <span>יש לקבל את אישור ההורים.</span></p>
-    <imageAdd @pushData="pushData" v-if="showInputs" />
+    <imageAdd @close="showInputs = !showInputs" @pushData="pushData" v-if="showInputs" />
     <div class="w-100 mt-2" v-if="!showInputs">
-      <button type="button" class="" @click="showInputs = !showInputs">הוסף תמונה</button>
+      <button type="button" class="" @click="showInputs = !showInputs">הוסיפו את התמונה שלכם</button>
     </div>
     <imageIn v-for="oneImg in addImg" :key="oneImg.id" :oneImg="oneImg" />
 
@@ -75,4 +75,5 @@
   span {
     font-weight: bold;
   }
+ 
 </style>

@@ -12,8 +12,9 @@
       <input type="text" v-model="myImg.street" placeholder="רחוב" required>
       <input type="text" v-model="myImg.namHome" placeholder="מספר בית" required>
       <input type="file" @change="previewImage" placeholder="העלה תמונה" required>
-      <div class="w-100 mt-2">
+      <div class="w-100 mt-2 center-all">
         <button type="submit" class="">שלח תמונה</button>
+        <div @click="$emit('close')" class="butt-close mr-4">סגור</div>
       </div>
     </form>
   </div>
@@ -96,6 +97,14 @@ import Compressor from 'compressorjs';
   }
 
   form button {
+    border: none;
+    background-color: #dc78b3;
+    padding: 7px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #501925;
+  }
+    .butt-close{
     border: none;
     background-color: #dc78b3;
     padding: 7px;

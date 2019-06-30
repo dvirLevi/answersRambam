@@ -11,8 +11,9 @@
       <input type="text" v-model="answers.city" placeholder="ישוב" required>
       <input type="text" v-model="answers.street" placeholder="רחוב" required>
       <input type="number" v-model="answers.nam" placeholder="מספר בית" required>
-      <div class="w-100 mt-2">
-        <button type="submit" class="">שלח תשובה</button>
+      <div class="w-100 mt-2 center-all">    
+        <button type="submit" class="">שלח תשובה</button>  
+        <div @click="$emit('close')" class="butt-close mr-4">סגור</div>
       </div>
     </form>
   </div>
@@ -66,6 +67,15 @@
   }
 
   form button {
+    border: none;
+    background-color: #dc78b3;
+    padding: 7px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #501925;
+  }
+
+  .butt-close{
     border: none;
     background-color: #dc78b3;
     padding: 7px;
