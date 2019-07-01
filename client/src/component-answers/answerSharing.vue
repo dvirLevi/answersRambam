@@ -342,6 +342,7 @@
     border-radius: 20px;
     margin: 2%;
     position: relative;
+    cursor: pointer;
   }
 
   .menu-selector {
@@ -353,5 +354,12 @@
     height: 400px;
     overflow-x: auto;
     z-index: 1;
+    padding: 8px
+  }
+
+   .menu-selector p{
+    border-bottom: solid #dedede 2px;
+    margin: 2px;
+    cursor: pointer;
   }
 </style>
