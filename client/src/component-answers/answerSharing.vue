@@ -82,7 +82,7 @@
           },
           {
             date: '2019-07-03',
-            dateH: 'ל סיון',
+            dateH: 'א תמוז',
             img: [{
                 img: require("../assets/5.png"),
                 id: 1
@@ -186,7 +186,7 @@
           },
           {
             date: '2019-07-22',
-            dateH: 'י"ח תמוז',
+            dateH: 'י"ט תמוז',
             img: [{
                 img: require("../assets/23.png"),
                 id: 1
