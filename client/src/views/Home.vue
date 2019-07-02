@@ -5,7 +5,7 @@
         <titleAnswer />
       </div>
     </div>
-    <div class="row mt-3">
+    <div class="row mt-3 mb-4">
       <div class="col-sm-6">
         <answerSharing />
       </div>
@@ -54,6 +54,7 @@
     left: 0;
     z-index: 1030;
     background-color: #ffffca;
+    font-size: 13px;
   }
 
   a {
