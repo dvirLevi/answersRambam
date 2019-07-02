@@ -2,7 +2,7 @@
   <div>
     <div class="row">
       <div class="col">
-      <titleAnswer/>
+        <titleAnswer />
       </div>
     </div>
     <div class="row mt-3">
@@ -11,6 +11,11 @@
       </div>
       <div class="col-sm-6">
         <imageSharing />
+      </div>
+    </div>
+    <div class="row fixed-bottom">
+      <div class="col">
+        <p class="m-0">נבנה ופותח בAppsLife ליצירת קשר - <a href="mailto:dvirleviapp@gmail.com">לחץ כאן!</a></p>
       </div>
     </div>
   </div>
@@ -38,6 +43,26 @@
 
   .col-sm-6:nth-child(2) {
     border-left: none;
+  }
+
+  .fixed-bottom {
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: #ffffca;
+  }
+
+  a {
+    text-decoration: none;
+    color: #d91a5d;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #d91a5d;
   }
 
   @media (max-width: 767.98px) {
