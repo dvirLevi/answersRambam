@@ -5,7 +5,7 @@
         <titleAnswer />
       </div>
     </div>
-    <div class="row mt-3">
+    <div class="row mt-3 mb-4">
       <div class="col-sm-6">
         <answerSharing />
       </div>
@@ -15,14 +15,13 @@
     </div>
      <div class="row">
       <div class="col push-bottom">
-       הרמבם מרכז
       </div>
     </div>
-    <!-- <div class="row fixed-bottom">
+    <div class="row fixed-bottom">
       <div class="col">
         <p class="m-0">נבנה ופותח בAppsLife ליצירת קשר - <a href="mailto:dvirleviapp@gmail.com">לחץ כאן!</a></p>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -48,10 +47,6 @@
 
   .col-sm-6:nth-child(2) {
     border-left: none;
-  }
-
-  .push-bottom{
-    height: 50px;
   }
 
   .fixed-bottom {
