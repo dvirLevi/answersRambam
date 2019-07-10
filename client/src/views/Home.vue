@@ -18,11 +18,11 @@
        הרמבם מרכז
       </div>
     </div>
-    <div class="row fixed-bottom">
+    <!-- <div class="row fixed-bottom">
       <div class="col">
         <p class="m-0">נבנה ופותח בAppsLife ליצירת קשר - <a href="mailto:dvirleviapp@gmail.com">לחץ כאן!</a></p>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
