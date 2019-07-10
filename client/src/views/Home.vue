@@ -15,6 +15,7 @@
     </div>
      <div class="row">
       <div class="col push-bottom">
+        מרכז
       </div>
     </div>
     <div class="row fixed-bottom">
